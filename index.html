@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App | Practice</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Weather App</h1>
+      <div class="tab-container">
+        <p class="tab" data-userWeather>Your Weather</p>
+        <p class="tab" data-searchWeather>Search Weather</p>
+      </div>
+      <div class="main-container">
+        <!--todo Grant ui container  -->
+        <div class="sub-container grant-location-container">
+          <img
+            src="./assets/location.png"
+            alt="location-png"
+            loading="lazy"
+            width="80"
+            height="80"
+          />
+          <p>Grant Location Access</p>
+          <p>Allow Access To Get Weather Information</p>
+          <button class="btn" data-grantAccess>Grant Access</button>
+        </div>
+
+        <!-- todo Search weather ui -->
+        <form action="" class="form-container" data-searchForm>
+          <input placeholder="Search for City..." data-searchInput />
+          <button class="btn">
+            <img
+              src="./assets/search.png"
+              alt="search-png"
+              loading="lazy"
+              width="20"
+              height="20"
+            />
+          </button>
+        </form>
+        <!--todo not found ui -->
+        <div data-notFound>
+          <img
+            src="./assets/not-found.png"
+            alt="not-found-img"
+            width="200px"
+            height="200px"
+          />
+          <p>Something went wrong..</p>
+        </div>
+        <!-- todo  Loading screen ui-->
+        <div class="sub-container loading-container">
+          <img
+            src="./assets/loading.gif"
+            alt="loading-gif"
+            width="150"
+            height="150"
+            loading="eager"
+          />
+          <p>Loading...</p>
+        </div>
+        <!-- todo show weather info ui -->
+        <div class="sub-container user-info-container">
+          <!-- ? City name and Flag -->
+          <div class="name">
+            <p data-cityName></p>
+            <img alt="country-img" data-countryIcon />
+          </div>
+          <!-- ? weather description -->
+          <p data-weatherDesc></p>
+          <!-- ? weather icon -->
+          <img alt="weather-icon" data-weatherIcon />
+          <!-- ? weather temp -->
+          <p data-temp></p>
+
+          <!--todo 3cards -->
+          <div class="card-container">
+            <!-- ? card 1 -->
+            <div class="card">
+              <img src="./assets/wind.png" alt="wind-png" />
+              <p>Windspeed</p>
+              <p data-windspeed></p>
+            </div>
+            <!-- ? card 2 -->
+            <div class="card">
+              <img src="./assets/humidity.png" alt="humidity-png" />
+              <p>Humidity</p>
+              <p data-humidity></p>
+            </div>
+            <!--? card 3 -->
+            <div class="card">
+              <img src="./assets/cloud.png" alt="cloud-png" />
+              <p>clouds</p>
+              <p data-cloudiness></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="source/app.js"></script>
+  </body>
+</html>
