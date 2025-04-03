@@ -36,6 +36,7 @@ function switchTab(newTab) {
       // means iam at search tab now -> main phele search wale tab pr tha
       searchForm.classList.remove("active");
       userInfoContainer.classList.remove("active");
+      notFoundContainer.classList.remove("active");
       getFromSessionStorage();
     }
   }
